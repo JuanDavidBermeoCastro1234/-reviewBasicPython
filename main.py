@@ -1,26 +1,17 @@
-# Ask for two numbers and the operation to perform
-number = float(input("Enter the first numeric value: "))
-number2 = float(input("Enter the second numeric value: "))
+# Solicitar dos números y la operación a realizar
+# Ejercicio 4: Determinación del tipo de triángulo
+# Escribe un programa que determine el tipo de triángulo en función de sus lados usando if .
+# Enunciado:
+# Solicita al usuario que ingrese las longitudes de los tres lados de un triángulo. Determina si el
+# triángulo es equilátero, isósceles o escaleno.
+   
+lado1=float(input(" Enter the first side of the triangle : "))
+lado2=float(input(" Enter the second side of the triangle : "))
+lado3=float(input(" Enter the third side of the triangle : "))
 
-# Ask for the operation to perform
-operation = input("Select a mathematical operation (+, -, *, /): ")
-
-# Use 'match' to select the operation
-match operation:
-    case "+":
-        result = number + number2
-        print(f"The result of the addition is: {result}")
-    case "-":
-        result = number - number2
-        print(f"The result of the subtraction is: {result}")
-    case "*":
-        result = number * number2
-        print(f"The result of the multiplication is: {result}")
-    case "/":
-        if number2 != 0:  # Check if division by zero
-            result = number / number2
-            print(f"The result of the division is: {result}")
-        else:
-            print("Error: Cannot divide by zero.")
-    case _:
-        print("Invalid operation. Please enter a valid operation (+, -, *, /).")
+if lado1==lado2==lado3:
+    print(f"the triangle is equilateral ")
+elif lado1!= lado2!=lado3:
+    print(f"the triangle is escaleno  ")
+else:
+    print("the triangle is isoceles ")
