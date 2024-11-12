@@ -1,24 +1,23 @@
-# Ejercicio 6: Juego de adivinanza de números
-# Escribe un programa que implemente un juego de adivinanza de números.
-# Enunciado:
-# El programa genera un número aleatorio entre 1 y 10. El usuario debe adivinar el número, y el
-# programa indica si el número ingresado es mayor, menor o igual al número generado
+# Ejercicio 11: Conversión de temperaturas
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
 
-import random
+def fahrenheit_to_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
 
-# Generar un número aleatorio entre 1 y 100 (Este es el número que solo tú sabrás)
-random_number = random.randint(1, 100)
+# Ask the user for temperature and scale
+temperature = float(input("Enter a temperature: "))
+scale = input("Enter a scale (C for Celsius, F for Fahrenheit): ").lower()
 
-# Imprimir el número para que solo tú lo veas
-#print(f"(El número aleatorio generado para adivinar es: {random_number})")
-
-# Pedir un número al usuario
-number = int(input("Ingresa un número entero, por favor: "))
-
-# Mientras el número ingresado no sea el correcto, seguir pidiendo
-while random_number != number:
-    print("No has adivinado el número, sigue intentando.")
-    number = int(input("Intenta con otro número: "))
-
-# Si el número es correcto
-print(f"¡Felicidades! Has adivinado el número.")
+# Use match to perform the conversion
+match scale:
+    case "f":
+        # Convert from Celsius to Fahrenheit
+        fahrenheit_value = celsius_to_fahrenheit(temperature)
+        print(f"The temperature {temperature}°C is equal to {fahrenheit_value}°F")
+    case "c":
+        # Convert from Fahrenheit to Celsius
+        celsius_value = fahrenheit_to_celsius(temperature)
+        print(f"The temperature {temperature}°F is equal to {celsius_value}°C")
+    case _:
+        print("Invalid scale. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
