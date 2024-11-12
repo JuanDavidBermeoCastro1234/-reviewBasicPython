@@ -1,21 +1,17 @@
-# Ejercicio 12: Calculadora de IMC (Índice de Masa Corporal)
-# Escribe un programa que calcule el IMC y determine el estado de peso.
+# Ejercicio 13: Comparación de tres números
+# Escribe un programa que determine el mayor de tres números usando if .
 # Enunciado:
-# Solicita al usuario su peso (en kg) y su altura (en metros). Calcula el IMC y clasifícalo en bajo peso
-# (<18.5), peso normal (18.5-24.9), sobrepeso (25-29.9), o obesidad (>=30).
+# Solicita al usuario que ingrese tres números y determina cuál es el mayor.
 
+number1=int(input("Enter a number : "))
+number2=int(input("Enter a number : "))
+number3=int(input("Enter a number : "))
 
-
-weight=float(input("Please enter your weight :"))
-height=float(input("Please enter your height : "))
-
-imc=weight/height**2
-
-if imc<18.5:
-    print(f"underweight")
-elif imc>18.5 and imc<24.9:
-    print(f"low normal")
-elif imc>25 and imc<29.9:
-    print(f"overweight")
-elif imc>30:
-    print(f"obesity")
+if number1>number2 and number1>number3:
+    print(f"{number1} is older")
+elif number2>number1 and number2>number3:
+    print(f"{number2} is older")    
+elif number3>number1 and number3>number2:
+    print(f"{number3} is older")
+else :
+    print("The three numbers are equal")
