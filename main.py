@@ -1,24 +1,25 @@
-# Ejercicio 15: Cálculo del salario neto
-# Escribe un programa que calcule el salario neto de un empleado después de aplicar impuestos.
+# Ejercicio 16: Cálculo del tiempo de viaje
+# Escribe un programa que calcule el tiempo que tarda en llegar un automóvil a su destino.
 # Enunciado:
-# Solicita al usuario su salario bruto y su país de residencia. Calcula el salario neto aplicando
-# impuestos: el 20% para residentes de "País A", el 15% para "País B" y el 10% para "País C". Si el
-# país no está en la lista, aplica un 25% de impuestos
+# Solicita al usuario la distancia a recorrer (en km) y la velocidad promedio del automóvil (en km/h).
+# Calcula el tiempo de viaje en horas y minutos. Si la velocidad es mayor a 120 km/h, muestra un
+# mensaje de advertencia.
 
+# Input data
+distance = float(input("Enter the distance in km: "))
+speed = float(input("Enter the speed in km/h: "))
 
-salary = float(input("Enter your salary: "))
-country_b = salary / 0.15
-country_a = salary / 0.20
-country_c = salary / 0.10
-other_country = salary / 0.25
+# Calculate the total time in hours
+total_time_hours = distance / speed
 
-country = input("Enter your country (a, b, c): ").lower()
+# Get the hours (integer part)
+hours = int(total_time_hours)
 
-if country == "a":
-    print(f"Your salary after tax is {country_a}")
-elif country == "b":
-    print(f"Your salary after tax is {country_b}")
-elif country == "c":
-    print(f"Your salary after tax is {country_c}")
-else:
-    print(f"Your salary after tax is {other_country}")
+# Get the minutes (decimal part * 60)
+minutes = round((total_time_hours - hours) * 60)
+
+# Display the result
+print(f"The travel time is {hours} hours and {minutes} minutes.")
+
+if speed>120:
+    print(F"BE CAREFUL ABOUT EXCESSIVE SPEEDING")
