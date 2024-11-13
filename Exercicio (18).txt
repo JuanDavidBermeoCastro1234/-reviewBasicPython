@@ -1,0 +1,23 @@
+﻿# Request the number of courses taken
+num_courses = int(input("Enter the number of courses you have taken: "))
+
+# Initialize the total credits counter
+total_credits = 0
+
+# Loop through each course to input the score and determine if it's approved
+for i in range(num_courses):
+    # Request the score obtained in the course
+    score = float(input(f"Enter the score for course {i + 1}: "))
+    
+    # Check if the score is enough to pass (>= 60)
+    if score >= 60:
+        # If passed, add 3 credits
+        total_credits += 3
+        print(f"Course {i + 1}: Passed")
+    else:
+        # If not passed
+        print(f"Course {i + 1}: Not passed")
+
+# Display the total number of credits obtained
+print(f"\nThe total number of credits obtained is: {total_credits}")
+
