@@ -1,0 +1,30 @@
+﻿# Ejercicio 17: Sistema de calificaciones con bonificaciones
+# Escribe un programa que calcule la calificación final de un estudiante basándose en su calificación
+# y si ha hecho tareas adicionales. Las tareas adicionales pueden darle un extra de puntos, pero el
+# máximo de puntos no puede exceder 100.
+# Enunciado:
+# Solicita la calificación del estudiante y pregunta si hizo tareas adicionales. Si la respuesta es "sí",
+# añade un 5% extra a la calificación, pero si la calificación supera 100, ajústala a 100. Si la respuesta
+# es "no", simplemente muestra la calificación original.
+
+# Solicitar la calificación actual del estudiante
+nota = float(input("Please enter your current grade: "))
+
+# Preguntar si hizo tareas adicionales (sí o no)
+tareas = input("Did you do extra chores? (si o no): ").lower()
+
+# Si hizo tareas adicionales, añadir un 5% a la calificación
+if tareas == "si":
+    # Calcular el 5% extra de la calificación
+    extra = nota * 0.05
+    # Nueva calificación con el extra
+    notaNueva = nota + extra
+    # Ajustar la calificación si supera 100
+    if notaNueva > 100:
+        notaNueva = 100
+    print(f"Your new grade after the extra chores is {notaNueva}")
+else:
+    # Si no hizo tareas adicionales, simplemente mostrar la calificación original
+    print(f"Your current grade is {nota}")
+   
+
