@@ -1,0 +1,14 @@
+﻿# Request a string of text from the user
+text = input("Enter a string of text: ")
+
+# Initialize the vowel counter to 0
+vowel_count = 0
+
+# Loop through each character in the string
+for char in text:
+    # Check if the character is a vowel (lowercase or uppercase)
+    if char.lower() in 'aeiou':
+        vowel_count += 1
+
+# Display the number of vowels found
+print(f"The number of vowels in the string is: {vowel_count}")
