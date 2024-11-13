@@ -1,0 +1,19 @@
+﻿# Request the three angles of the triangle
+angle1 = float(input("Enter the first angle of the triangle: "))
+angle2 = float(input("Enter the second angle of the triangle: "))
+angle3 = float(input("Enter the third angle of the triangle: "))
+
+# Classify the triangle based on its angles
+if angle1 == 90 or angle2 == 90 or angle3 == 90:
+    triangle_type = "Right"
+elif angle1 > 90 or angle2 > 90 or angle3 > 90:
+    triangle_type = "Obtuse"
+elif angle1 < 90 and angle2 < 90 and angle3 < 90:
+    triangle_type = "Acute"
+else:
+    triangle_type = "Not a valid triangle"
+
+# Display the type of triangle
+print(f"The triangle is {triangle_type}.")
+
+
