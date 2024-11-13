@@ -1,0 +1,21 @@
+﻿# Request the numeric grade
+grade = float(input("Enter the numeric grade (0-100): "))
+
+# Use match to convert the numeric grade to a letter
+match grade:
+    case grade if 90 <= grade <= 100:
+        letter = 'A'
+    case grade if 80 <= grade <= 89:
+        letter = 'B'
+    case grade if 70 <= grade <= 79:
+        letter = 'C'
+    case grade if 60 <= grade <= 69:
+        letter = 'D'
+    case _ if 0 <= grade <= 59:
+        letter = 'F'
+    case _:
+        letter = 'Invalid grade'
+
+# Display the grade as a letter
+print(f"The grade in letter is: {letter}")
+
