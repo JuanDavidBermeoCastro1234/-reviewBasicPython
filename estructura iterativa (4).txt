@@ -1,0 +1,10 @@
+﻿# Request the user for the start and end values
+start = int(input("Enter the start value: "))
+end = int(input("Enter the end value: "))
+
+# Loop through the range from start to end (including both limits)
+for i in range(start, end + 1):
+    # Check if the number is even
+    if i % 2 == 0:
+        print(i)
+
