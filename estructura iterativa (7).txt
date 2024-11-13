@@ -1,0 +1,19 @@
+﻿# Initialize the variable to store the sum
+sum = 0
+
+# Use a while loop to enter numbers indefinitely
+while True:
+    # Request an integer from the user
+    number = int(input("Enter an integer: "))
+    
+    # Check if the number is odd
+    if number % 2 != 0:
+        # If it's odd, stop the loop
+        break
+    
+    # If it's even, add it to the sum
+    sum += number
+
+# Display the sum of the even numbers
+print(f"The sum of the even numbers entered is: {sum}")
+
